@@ -10,7 +10,7 @@
 		container:'.wrapper',   //必填 挂载容器
 		imageUrl:'',//必填 图片url
 		limit:{
-			minWidth:500,//宽度限制
+			minWidth:50,//宽度限制
 			maxWidth:200,
 			minHeight:50,//高度限制
 			maxHeight:200,
