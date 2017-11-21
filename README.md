@@ -10,6 +10,7 @@ canvas image editor
      
 # Options   
 `{
+
 		container:'.wrapper',   //必填 挂载容器
 		limit:{
 			minWidth:500,//宽度限制
@@ -42,11 +43,15 @@ canvas image editor
 		afterRender:function(){
       //图片加载并开始渲染
 		}
+		
 	}`
 
 
 # API
 `initImage(url,callback)` 读取图片链接
+
 `readFile(file)` 读取`File`
+
 `save()` 保存结果，返回 `blob，dataUrl`
+
 其他使用请参考demo
