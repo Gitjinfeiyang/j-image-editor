@@ -54,4 +54,8 @@ canvas image editor
 
 `save()` 保存结果，返回 `blob，dataUrl`
 
+`scaleInCenter(scale)` 以canvas中心为中心缩放
+
+`rotateZ(deg)` 以canvas中心为中心旋转
+
 其他使用请参考demo
