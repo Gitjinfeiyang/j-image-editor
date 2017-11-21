@@ -648,23 +648,23 @@ var pow = Math.pow,
 			targeth=this.editorRect.h+offset.h;
 
 			
-			// //判断size
-			// if(limit.maxWidth!=0&&targetw>limit.maxWidth){
-			// 	targetw=limit.maxWidth;
-			// 	return;
-			// }
-			// if(limit.minWidth!=0&&targetw<limit.minWidth){
-			// 	targetw=limit.minWidth;
-			// 	return;
-			// }
-			// if(limit.minHeight!=0&&targeth<limit.minHeight){
-			// 	targeth=limit.minHeight;
-			// 	return;
-			// }
-			// if(limit.maxHeight!=0&&targeth>limit.maxHeight){
-			// 	targeth=limit.maxHeight;
-			// 	return;
-			// }
+			//判断size
+			if(limit.maxWidth!=0&&targetw>limit.maxWidth){
+				targetw=limit.maxWidth;
+				return;
+			}
+			if(limit.minWidth!=0&&targetw<limit.minWidth){
+				targetw=limit.minWidth;
+				return;
+			}
+			if(limit.minHeight!=0&&targeth<limit.minHeight){
+				targeth=limit.minHeight;
+				return;
+			}
+			if(limit.maxHeight!=0&&targeth>limit.maxHeight){
+				targeth=limit.maxHeight;
+				return;
+			}
 
 			this.editorRect.x=targetx;
 			this.editorRect.y=targety;
