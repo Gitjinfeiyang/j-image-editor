@@ -2,7 +2,7 @@
 canvas image editor
 
 # Demo
-[在线演示](http://example.com/ "Title")
+[在线演示](https://gitjinfeiyang.github.io/j-image-editor/)
 
 # 使用
 请参考demo  
