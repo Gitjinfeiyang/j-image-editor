@@ -11,20 +11,20 @@ canvas image editor
 # Options   
 `{
 
-		container:'.wrapper',   //必填 挂载容器
-		limit:{
-			minWidth:500,//宽度限制
-			maxWidth:200,
-			minHeight:50,//高度限制
-			maxHeight:200,
-			maxSize:50,//图片大小限制 kb
-		},
+	container:'.wrapper',   //必填 挂载容器
+	limit:{
+		minWidth:500,//宽度限制
+		maxWidth:200,
+		minHeight:50,//高度限制
+		maxHeight:200,
+		maxSize:50,//图片大小限制 kb
+	},
     created:function(imageEditor){
       //editor被初始化后
     },
-		beforeReadFile:function(){
-		  //初始化file之前 只有调用`readFile(file)`才会触发 (建议在这一步显示编辑器)
-		},
+    beforeReadFile:function(){
+     //初始化file之前 只有调用`readFile(file)`才会触发 (建议在这一步显示编辑器)
+    },
     afterReadFile:function(){
 		  //通过FileReader读取文件之后
 		},
@@ -40,11 +40,11 @@ canvas image editor
     afterSave:function(){
 		  //保存之后
 		},
-		afterRender:function(){
+     afterRender:function(){
       //图片加载并开始渲染
-		}
+     }
 		
-	}`
+}`
 
 
 # API
