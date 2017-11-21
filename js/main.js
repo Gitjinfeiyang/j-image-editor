@@ -11,9 +11,9 @@
 		imageUrl:'',//必填 图片url
 		limit:{
 			minWidth:50,//宽度限制
-			maxWidth:200,
-			minHeight:50,//高度限制
-			maxHeight:200,
+			maxWidth:400,
+			minHeight:100,//高度限制
+			maxHeight:400,
 			maxSize:50,//图片大小限制 kb
 			proportion:1/1,//宽高比
 		},

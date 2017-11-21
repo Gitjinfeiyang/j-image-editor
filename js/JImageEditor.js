@@ -29,6 +29,7 @@ var pow = Math.pow,
 	commonCanvas.style.display='none';
 
 	class ImageEditor{
+		
 		constructor(options){
 			this.options=options;//自定义
 			this.created=this.options.created||function(imageEditor){console.log('created')};//canvas初始化完成后 参数ImageEditor
