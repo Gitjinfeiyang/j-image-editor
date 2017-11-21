@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>img editor by jfy</title>
+	<meta charset="utf-8">
+	<!-- <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'> -->
+	<style type="text/css">
+	*{margin:0; padding:0;}
+		.wrapper{width:100vw; height:100vh;overflow: hidden; display: none; position:absolute; top:0; left:0; background:#000;
+		 z-index: 10}
+		.buttons{position:fixed; bottom:50px; right:50px; z-index:100;}
+	</style>
+</head>
+<body>
+
+
+<div class='img-editor'>
+	<img id='showImg' src=''>
+	<input type='file' id='imgPicker'/>
+</div>
+
+
+
+<div class='wrapper'>
+
+
+
+
+</div>
+
+	<div class='buttons'>
+		<input type='button' value='保存' id='save'/>
+		<input type='button' value='顺时针旋转90度' id='rotate90'/>
+		<input type='button' value='原始比例' id='scaleToOrigin'/>
+		<input type='button' value='取消' id='cancel'/>
+	</div>
+
+<script type="text/javascript" src="./js/AlloyFinger.min.js"></script>
+<script type="text/javascript" src="./js/JImageEditor.min.js"></script>
+<!-- <script type="text/javascript" src="./js/JImageBrowser.min.js"></script> -->
+<script type="text/javascript" src="./js/main.min.js"></script>
+</body>
+</html>
