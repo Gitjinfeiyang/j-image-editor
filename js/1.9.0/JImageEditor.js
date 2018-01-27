@@ -45,8 +45,6 @@ var pow = Math.pow,
 			this.shadowImageCanvas=document.createElement('canvas');//用于绘制阴影图片的canvas
 			this.width=options.width;//画布宽度
 			this.height=options.height;//画布高度
-			this.offsetX=0;
-			this.offsetY=0;
 			this.animationFrame={};
 			this.center={//画布中心
 				x:0,
@@ -252,8 +250,8 @@ var pow = Math.pow,
 				    // this.initImageData(lastScale,this.scale,{x:0,y:0},{x:e.pageX,y:e.pageY});
 				    this.transformImage({
 				    	scaleCenter:{
-				    		x:e.pageX-this.container.offsetLeft,
-				    		y:e.pageY-this.container.offsetTop,
+				    		x:e.pageX,
+				    		y:e.pageY,
 				    		scale,
 				    	}
 				    })
@@ -430,7 +428,6 @@ var pow = Math.pow,
 			let canvas2=this.canvas2=document.createElement('canvas');
 			let container=this.container=document.querySelector(this.options.container);
 
-
 			container.appendChild(canvas1);
 			container.appendChild(canvas2);
 
@@ -601,9 +598,6 @@ var pow = Math.pow,
 			};
 			l();
 			this.afterRender();
-
-			this.offsetX=this.container.offsetLeft;
-			this.offsetY=this.container.offsetTop;
 		}
 
 		clearCanvas(){
@@ -1031,19 +1025,19 @@ var pow = Math.pow,
 	})();
 
 	function isPC() {
-	    var userAgentInfo = navigator.userAgent;
-	    var Agents = ["Android", "iPhone",
-	                "SymbianOS", "Windows Phone",
-	                "iPad", "iPod"];
-	    var flag = true;
-	    for (var v = 0; v < Agents.length; v++) {
-	        if (userAgentInfo.indexOf(Agents[v]) > 0) {
-	            flag = false;
-	            break;
-	        }
-	    }
-	    return flag;
-	}
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
 
 
 

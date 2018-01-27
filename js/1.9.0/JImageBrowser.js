@@ -44,8 +44,6 @@ var pow = Math.pow,
 			this.shadowImageCanvas=document.createElement('canvas');//用于绘制阴影图片的canvas
 			this.width=options.width;//画布宽度
 			this.height=options.height;//画布高度
-			this.offsetX=0;
-			this.offsetY=0;
 			this.animationFrame={};
 			this.center={//画布中心
 				x:0,
@@ -187,8 +185,8 @@ var pow = Math.pow,
 			    // this.initImageData(lastScale,this.scale,{x:0,y:0},{x:e.pageX,y:e.pageY});
 			    this.transformImage({
 			    	scaleCenter:{
-			    		x:e.pageX-this.container.offsetLeft,
-			    		y:e.pageY-this.container.offsetTop,
+			    		x:e.pageX,
+			    		y:e.pageY,
 			    		scale,
 			    	}
 			    })
