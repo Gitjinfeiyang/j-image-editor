@@ -3,21 +3,41 @@
 <head>
 	<title>img editor by jfy</title>
 	<meta charset="utf-8">
-	<!-- <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'> -->
+	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<style type="text/css">
 	*{margin:0; padding:0;}
-		.wrapper{width:800px; height:800px;overflow: hidden; display: none; position:absolute; bottom:100px; right:100px; background:#000;
+		.wrapper{width:100vw; height:100vh;overflow: hidden; display: none; position:absolute;left:0; top:0;background:#000;
 		 z-index: 10}
+		 .my-button{line-height: 30px; border-radius: 2px; background:#fff;}
 		.buttons{position:fixed; bottom:50px; right:50px; z-index:100;}
+		.img-editor{text-align: center; padding-top: 20px;}
+		.img-wrapper{
+			display: inline-block; width:260px; height:260px; border-radius: 50%; overflow:hidden;
+		}
+		.img-wraper img{width:100%;}
+		#imgPicker{display: none;}
+
+		.card{display: inline-block;}
+		.card img{width:100%;}
 	</style>
 </head>
 <body>
 
 
 <div class='img-editor'>
-	<img id='showImg' src=''>
-	<input type='file' id='imgPicker'/>
+	<div class="card" style="width: 30rem;">
+	  <img id='showImg' class="card-img-top" src="" alt="Choose a pic to edit">
+	  <div class="card-body">
+	    <h5 class="card-title">Please choose a pic to edit :)</h5>
+	    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+	    <a href="#" class="btn btn-primary" id="choosePic">选择图片</a>
+		<input type='file' id='imgPicker'/>
+	  </div>
+	</div>
 </div>
+
+
 
 
 
@@ -25,15 +45,15 @@
 
 
 
-
+	<div class='buttons'>
+		<input type='button' class="btn btn-primary" value='保存' id='save'/>
+		<input type='button' class="btn btn-primary" value='顺时针旋转90度' id='rotate90'/>
+		<input type='button' class="btn btn-primary" value='原始比例' id='scaleToOrigin'/>
+		<input type='button' class="btn btn-primary" value='取消' id='cancel'/>
+	</div>
 </div>
 
-	<div class='buttons'>
-		<input type='button' value='保存' id='save'/>
-		<input type='button' value='顺时针旋转90度' id='rotate90'/>
-		<input type='button' value='原始比例' id='scaleToOrigin'/>
-		<input type='button' value='取消' id='cancel'/>
-	</div>
+
 
 <script type="text/javascript" src="./js/AlloyFinger.min.js"></script>
 <script type="text/javascript" src="./js/JImageEditor.min.js"></script>

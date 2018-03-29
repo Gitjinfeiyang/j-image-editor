@@ -1,10 +1,13 @@
 
 
+	console.log(window.location.href)
+
 
 
 	let imgShow=document.querySelector('#showImg');
 	let imgPicker=document.querySelector('#imgPicker');
 	let imgEditor=document.querySelector('.wrapper');
+	let choosePic=document.querySelector("#choosePic");
 
 	const options={
 		container:'.wrapper',   //必填 挂载容器
@@ -30,6 +33,9 @@
 	imgPicker.addEventListener('change',function(e){
 		let file=e.target.files[0];
 		editor.readFile(file);
+	})
+	choosePic.addEventListener("click",function(e){
+		imgPicker.click()
 	})
 
 
